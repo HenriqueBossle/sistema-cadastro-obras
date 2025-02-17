@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Construction;
+use Barryvdh\DomPDF\Facade\PDF;
 use Illuminate\Http\Request;
 
 class ConstructionController extends Controller
@@ -99,5 +100,13 @@ class ConstructionController extends Controller
         $construction = Construction::findOrFail($id);
         $construction->delete();
         return redirect('constructions')->with('success', 'Construction deleted successfully');
+    }
+
+    public function generatePDF($id)
+    {
+        $construction = Construction::findOrFail($id); 
+        $pdf = PDF::loadView('constructions.pdf', compact('construction'));
+        $pdf->setPaper('A4', 'portrait');
+        return $pdf->download("obra-{$construction->id}.pdf");
     }
 }

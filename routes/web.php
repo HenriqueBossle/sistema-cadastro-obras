@@ -24,5 +24,6 @@ Route::post('constructions', [ConstructionController::class, 'store']);
 Route::get('constructions/{id}/edit', [ConstructionController::class, 'edit']);
 Route::put('constructions/{id}', [ConstructionController::class, 'update']);
 Route::delete('constructions/{id}', [ConstructionController::class, 'destroy']);
-
+Route::get('constructions/{id}/pdf', [ConstructionController::class, 'generatePDF'])->name('constructions.pdf');
+ 
 require __DIR__.'/auth.php';

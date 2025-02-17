@@ -36,7 +36,10 @@
                 class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
             Deletar
         </button>
-    </form>
+    </form> 
+    <a  href="{{ route('constructions.pdf', $entity->id) }}" class="bg-red-500 hover:bg-red-700 text-white font-bold  p-2 rounded">
+        Gerar PDF
+    </a>
 </div>
 
 </ul>
