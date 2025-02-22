@@ -3,6 +3,7 @@
 <div class="flex justify-center mb-5 text-white p-5 font-bold border-solid bg-red-500">
 <h1 class="text-2xl">Editar cadastro de obra</h1></div>
 <a href="{{ url('constructions') }}" class="bg-red-500 hover:bg-gray-200 text-black font-bold m-5 py-2 px-4 rounded">Voltar</a>
+<a href="{{ url('dashboard') }}" class="bg-red-500 hover:bg-gray-200 text-black font-bold m-5 py-2 px-4 rounded">Tela inicial</a>
 
 <form class="max-w-sm mx-auto p-5 m-5 border-2 border-solid bg-gray-500 rounded-xl"  action="{{ url('constructions/'.$construction->id) }}" method="POST">
 @csrf

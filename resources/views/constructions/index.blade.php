@@ -4,6 +4,7 @@
 <h1 class="text-2xl">Obras</h1>
 </div>
 <a href="{{ url('constructions/create') }}" class="bg-red-500 hover:bg-gray-200 text-black font-bold m-5 py-2 px-4 rounded">Cadastrar nova obra</a>
+<a href="{{ url('dashboard') }}" class="bg-red-500 hover:bg-gray-200 text-black font-bold m-5 py-2 px-4 rounded">Tela inicial</a>
 
 <div class="max-w-7xl mx-auto px-4 m-5">
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
