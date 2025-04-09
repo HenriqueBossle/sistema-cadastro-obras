@@ -2,9 +2,10 @@
 @section('content')
 <div class="flex justify-center mb-5 text-white p-5 font-bold border-solid bg-red-500">
 <h1 class="text-2xl">Cadastro de obra</h1></div>
-<a href="{{ url('constructions') }}" class="bg-red-500 hover:bg-gray-200 text-black font-bold m-5 py-2 px-4 rounded">Visualizar obras</a>
-<a href="{{ url('dashboard') }}" class="bg-red-500 hover:bg-gray-200 text-black font-bold m-5 py-2 px-4 rounded">Tela inicial</a>
-
+<div class="flex">
+<a href="{{ url('constructions') }}" class="bg-red-500 hover:bg-gray-200 text-black font-bold mb-5 ml-5 py-2 px-4 w-64 rounded">Visualizar obras</a>
+<a href="{{ url('dashboard') }}" class="bg-red-500 hover:bg-gray-200 text-black font-bold mb-5 py-2 ml-5 px-4 w-64 rounded">Tela inicial</a>
+</div>
 <form class="max-w-sm mx-auto p-5 m-5 border-2 border-solid bg-gray-500 rounded-xl" action="{{url('constructions')}}" method="POST">
 @csrf
 <h1 class="mb-5 text-white p-5 font-bold border-solid bg-red-500 rounded-xl">Preencha os campos abaixo para cadastrar a nova obra</h1>
@@ -40,7 +41,10 @@
       <label for="volume"></label>
       <input type="int" name="volume" id="volume" placeholder="Volume" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
    </div>
-   
+   <div class="mb-5">
+      <label for="date"></label>
+      <input type="date" name="date" id="date" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
+   </div>
    <div class="mb-5">
       <label for="notes"></label>
       <input type="text" name="notes" id="notes" placeholder="Observações" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>

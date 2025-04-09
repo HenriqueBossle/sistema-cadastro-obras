@@ -13,9 +13,19 @@ class ConstructionController extends Controller
      */
     public function index()
     {
-        $constructions = Construction::all();
-        return view('constructions.index', compact('constructions'));
+        $search = request('search');
+        $campo = request('campo');
+        if($search){
+           $constructions = Construction::where([
+               [$campo, 'like', '%'.$search.'%']
+           ])->get();
+        }else{
+            $constructions = Construction::all();
+        }
+
+        return view('constructions.index', compact('constructions'), ['search' => $search]);
     }
+
 
     /**
      * Show the form for creating a new resource.
@@ -40,6 +50,7 @@ class ConstructionController extends Controller
         'type' => 'required',
         'status' => 'required',
         'volume' => 'required',
+        'date' => 'required',
         'notes' => 'required',
     ]);
 
@@ -52,6 +63,7 @@ class ConstructionController extends Controller
         $construction->type = $request->type;
         $construction->status = $request->status;
         $construction->volume = $request->volume;
+        $construction->date = $request->date;
         $construction->notes = $request->notes;
         $construction->save();
 
@@ -84,6 +96,7 @@ class ConstructionController extends Controller
             $construction->type = $request->type;
             $construction->status = $request->status;
             $construction->volume = $request->volume;
+            $construction->date = $request->date;
             $construction->notes = $request->notes;
 
             $construction->save();

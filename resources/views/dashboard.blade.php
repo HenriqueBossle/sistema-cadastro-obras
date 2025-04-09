@@ -5,7 +5,7 @@
 </div>
              <form method="POST" action="{{ route('logout') }}">
                             @csrf
-                            <button class="bg-red-500 hover:bg-gray-200 text-black font-bold m-5 py-2 px-4 rounded" :href="route('logout')"
+                            <button class="bg-red-500 hover:bg-gray-200 text-black font-bold mb-5 ml-5  py-2 px-4 rounded" :href="route('logout')"
                                     onclick="event.preventDefault();
                                                 this.closest('form').submit();">
                                 {{ __('Sair') }}

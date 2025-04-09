@@ -15,6 +15,7 @@ class Construction extends Model
         'type',
         'status',
         'volume',
+        'date',
         'notes'
     ];
 }

@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('type', 200);
             $table->string('status', 200);
             $table->integer('volume',);
+            $table->date('date');
             $table->text('notes',);
             $table->timestamps();
         });
