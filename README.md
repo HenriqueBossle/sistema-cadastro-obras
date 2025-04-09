@@ -1,6 +1,6 @@
 Esse é até o momento o sistema mais completo que fiz.
 É uma aplicação web feita com Laravel 11.
-O sistema consiste em um gerenciador de obras de construção civil bem simples, que pemrite cadastrar, listar, editar e excluir as obras, além de gerar um pequeno relatório em PDF com as informações das mesmas.
+O sistema consiste em um gerenciador de obras de construção civil bem simples, que permite pesquisar por campo de dado, cadastrar, listar, editar e excluir as obras, além de gerar um pequeno relatório em PDF com as informações das mesmas.
 
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
